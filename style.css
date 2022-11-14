@@ -17,6 +17,8 @@ form {
 
 body{
     background: #372948;
+    width: 100vw;
+    height: 100vh;
 }
 
 .card {
