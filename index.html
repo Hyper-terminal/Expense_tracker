@@ -5,26 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+    <h2 class="heading">Expence Tracker</h2>
+
     <form  onsubmit="addExpence(event)">
-      <label for="expence">Choose Expence Amount:</label>
-      <input type="number" name="expence" id="expence" required />
+      <label class="form-label" for="expence">Choose Expence Amount:</label>
+      <input class="form-control" type="number" name="expence" id="expence" placeholder="Enter your expence amount here..." required />
 
-      <label for="description">Choose Description</label>
-      <input type="text" name="description" id="description" required />
+      <label class="form-label" for="description">Choose Description:</label>
+      <input class="form-control" type="text" name="description" id="description" placeholder="Enter description here..." required />
 
-      <label for="category">Choose a category</label>
-      <select id="category" name="category" required>
+      <label class="form-label" for="category">Choose a category:</label>
+      <select class="form-select" id="category" name="category" required>
         <option value="movie">Movies</option>
         <option value="tourism">Tourism</option>
         <option value="food">Food</option>
         <option value="shopping">Shopping</option>
       </select>
-      <button>ADD EXPENCES</button>
+      <button class="btn btn-secondary">ADD EXPENCES</button>
     </form>
-    <ul id="users"></ul>
+    <div class="row" id="users"></div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 

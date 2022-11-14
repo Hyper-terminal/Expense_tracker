@@ -1,7 +1,7 @@
 "use strict";
 
 // crudcrud api key
-const apiKey = "e0723aab5e7640bbbff5f226b4afacd0";
+const apiKey = "77768f904bbd4fb7a87681eba06eea72";
 
 let axiosInstance = axios.create({
     baseURL: "https://crudcrud.com/api/" + apiKey
@@ -56,15 +56,22 @@ function showExpenses(expense_obj) {
 
     let parentnode = document.getElementById("users");
 
-
     let childHtml = `
-<li class="expense-list-item" id=${expense_obj._id}> Category: ${expense_obj.category}, Description: ${expense_obj.description} -----> Expense: ₹${expense_obj.expence} 
 
-<button onclick = deleteExpense('${expense_obj._id}')>Delete</button>
-<button onclick=editExpense('${JSON.stringify(expense_obj)}')>Edit</button>
-
-</li>
-`;
+<div class="col-md-4 col-sm-6 col-xs-12 col-lg-3" id=${expense_obj._id}>
+<div  class="card" style="width: 100%; text-align: center;">
+<div class="card-body">
+    <h3>Amount: ₹${expense_obj.expence}</h3>
+    <h5 class="card-title">Category: ${expense_obj.category}</h5>
+    <p class="card-text">Description: ${expense_obj.description}</p>
+    
+    <button class="btn btn-danger" onclick = deleteExpense('${expense_obj._id}')>Delete</button>
+    <button class="btn btn-primary" onclick=editExpense('${JSON.stringify(expense_obj)}')>Edit</button>
+    
+  </div>
+</div>
+</div>
+`
     parentnode.innerHTML += childHtml;
 }
 

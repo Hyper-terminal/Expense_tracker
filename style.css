@@ -1,0 +1,41 @@
+h1,h2,h3,h4,h5,h6,p,label {
+    color: #FFECEF;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.heading {
+    text-align: center;
+    font-size: 7rem;
+}
+
+body{
+    background: #372948;
+}
+
+.card {
+ background-color: #FFCACA;
+}
+
+.card  p,h3,h5{
+    color: black;
+}
+
+.row {
+    margin: 2rem;
+}
+
+label{
+    margin-top: 1rem;
+}
+
+form button {
+    margin-left: 35%;
+    margin-top: 3%;
+}
