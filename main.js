@@ -1,7 +1,7 @@
 "use strict";
 
 // crudcrud api key
-const apiKey = "77768f904bbd4fb7a87681eba06eea72";
+const apiKey = "465efa6e3c1041b8982430c02611a4d7";
 
 let axiosInstance = axios.create({
     baseURL: "https://crudcrud.com/api/" + apiKey
